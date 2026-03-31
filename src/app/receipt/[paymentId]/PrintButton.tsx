@@ -1,0 +1,12 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+
+export default function PrintButton() {
+  return (
+    <Button onClick={() => window.print()} className="print:hidden">
+      Print Receipt
+    </Button>
+  );
+}
+
