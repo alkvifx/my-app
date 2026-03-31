@@ -53,7 +53,7 @@ export async function getDashboardStats() {
 
   const totalFeesCollected = paymentAgg._sum.amount ?? 0;
 
-  const totalPendingFees = students.reduce((sum, s) => {
+  const totalPendingFees = students.reduce((sum: number, s) => {
     const remaining = s.finalFee - s.paidAmount;
     return sum + (remaining > 0 ? remaining : 0);
   }, 0);
